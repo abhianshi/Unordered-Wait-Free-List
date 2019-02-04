@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -msse2 -mfpmath=sse -march=core2 -mtune=core2  -O3 -g  -rdynamic  -m64 CMakeFiles/WaitFreeListSSB64.dir/WaitFreeList.cpp.o  -o WaitFreeListSSB64 ../libstm/libstm64.a -lpthread -lrt 

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/abhi/Multicore/rstm/bench/WaitFreeList.cpp
+iostream
+-
+atomic
+-
+thread
+-
+cstdlib
+-
+ctime
+-
+mutex
+-
+map
+-
+

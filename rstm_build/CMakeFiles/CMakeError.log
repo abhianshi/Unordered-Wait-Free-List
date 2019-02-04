@@ -1,0 +1,88 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/abhi/Multicore/rstm_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_930af/fast"
+/usr/bin/make -f CMakeFiles/cmTC_930af.dir/build.make CMakeFiles/cmTC_930af.dir/build
+make[1]: Entering directory '/home/abhi/Multicore/rstm_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_930af.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -O2 -g -DNDEBUG   -o CMakeFiles/cmTC_930af.dir/CheckSymbolExists.c.o   -c /home/abhi/Multicore/rstm_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_930af
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_930af.dir/link.txt --verbose=1
+/usr/bin/cc   -O2 -g -DNDEBUG    -rdynamic CMakeFiles/cmTC_930af.dir/CheckSymbolExists.c.o  -o cmTC_930af 
+CMakeFiles/cmTC_930af.dir/CheckSymbolExists.c.o: In function `main':
+/home/abhi/Multicore/rstm_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_930af.dir/build.make:97: recipe for target 'cmTC_930af' failed
+make[1]: *** [cmTC_930af] Error 1
+make[1]: Leaving directory '/home/abhi/Multicore/rstm_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_930af/fast' failed
+make: *** [cmTC_930af/fast] Error 2
+
+File /home/abhi/Multicore/rstm_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/abhi/Multicore/rstm_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_af07d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_af07d.dir/build.make CMakeFiles/cmTC_af07d.dir/build
+make[1]: Entering directory '/home/abhi/Multicore/rstm_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_af07d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG   -o CMakeFiles/cmTC_af07d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_af07d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af07d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG    -rdynamic CMakeFiles/cmTC_af07d.dir/CheckFunctionExists.c.o  -o cmTC_af07d -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_af07d.dir/build.make:97: recipe for target 'cmTC_af07d' failed
+make[1]: *** [cmTC_af07d] Error 1
+make[1]: Leaving directory '/home/abhi/Multicore/rstm_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_af07d/fast' failed
+make: *** [cmTC_af07d/fast] Error 2
+
+
+Performing C++ SOURCE FILE Test CXX_HAS_-m32 failed with the following output:
+Change Dir: /home/abhi/Multicore/rstm_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f424e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f424e.dir/build.make CMakeFiles/cmTC_f424e.dir/build
+make[1]: Entering directory '/home/abhi/Multicore/rstm_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f424e.dir/src.cxx.o
+/usr/bin/c++    -Wall -msse2 -mfpmath=sse -march=core2 -mtune=core2 -DCXX_HAS_-m32  -O3 -g   -m32 -o CMakeFiles/cmTC_f424e.dir/src.cxx.o -c /home/abhi/Multicore/rstm_build/CMakeFiles/CMakeTmp/src.cxx
+<command-line>:0:9: warning: ISO C++11 requires whitespace after the macro name
+Linking CXX executable cmTC_f424e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f424e.dir/link.txt --verbose=1
+/usr/bin/c++   -Wall -msse2 -mfpmath=sse -march=core2 -mtune=core2 -DCXX_HAS_-m32  -O3 -g    -rdynamic CMakeFiles/cmTC_f424e.dir/src.cxx.o  -o cmTC_f424e -m32 
+/usr/bin/ld: cannot find Scrt1.o: No such file or directory
+/usr/bin/ld: cannot find crti.o: No such file or directory
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.so when searching for -lstdc++
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libstdc++.a when searching for -lstdc++
+/usr/bin/ld: cannot find -lstdc++
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.so when searching for -lm
+/usr/bin/ld: skipping incompatible //usr/lib/x86_64-linux-gnu/libm.a when searching for -lm
+/usr/bin/ld: cannot find -lm
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc_s.so.1 when searching for libgcc_s.so.1
+/usr/bin/ld: cannot find libgcc_s.so.1
+/usr/bin/ld: skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/7/libgcc.a when searching for -lgcc
+/usr/bin/ld: cannot find -lgcc
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f424e.dir/build.make:97: recipe for target 'cmTC_f424e' failed
+make[1]: *** [cmTC_f424e] Error 1
+make[1]: Leaving directory '/home/abhi/Multicore/rstm_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f424e/fast' failed
+make: *** [cmTC_f424e/fast] Error 2
+
+Source file was:
+int main() { return 0; }
